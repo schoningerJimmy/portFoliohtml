@@ -1,0 +1,19 @@
+{
+  "name": "schoningerjimmyportfolio",
+  "version": "1.0.0",
+  "description": "it a server for my portfolio which use express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schoningerJimmy/portFoliohtml.git"
+  },
+  "author": "schoninger jimmy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/schoningerJimmy/portFoliohtml/issues"
+  },
+  "homepage": "https://github.com/schoningerJimmy/portFoliohtml#readme"
+}

@@ -13,13 +13,9 @@ function downloadResume () {
           {type: 'application/pdf'});//Build a URL from the file
         const downloadUrl = window.URL.createObjectURL(file);//Open the URL on new Window
         const link = document.createElement('a');
-
         link.href = downloadUrl;
-
         link.setAttribute('download', 'SchoningerJimmy.pdf'); //any other extension
-
         document.body.appendChild(link);
-
         link.click();
         })
     .catch(error => {
@@ -34,4 +30,8 @@ function menuToggle() {
     toggleMenu.classList.toggle('active');
     navigation.classList.toggle('active');
     
+}
+
+function sendEmail() {
+    // TO DO
 }

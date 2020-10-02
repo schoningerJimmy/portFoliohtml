@@ -18,7 +18,7 @@ app.use(cors());
 
 
 
-// Serve the static files from the React app
+// Serve the static files from the public repo
 app.use(express.static(path.join(__dirname, 'public')));
 
 // An api endpoint that returns a short list of items
@@ -26,7 +26,13 @@ app.get('/api', (req, res, next) => {
     res.send('API status: running');
 });
 
+// download the resume from the button
 
+app.get('/download', function(req, res){
+    path.join(__dirname, 'public', 'images', 'bg.png');
+    const file = path.join(__dirname, 'public', 'data', 'test.txt');
+    res.download(file); // Set disposition and send it.
+  });
 
 
 // Handles any requests that don't match the ones above

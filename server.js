@@ -29,7 +29,7 @@ app.get('/api', (req, res, next) => {
 // download the resume from the button
 
 app.get('/download', function(req, res){
-    path.join(__dirname, 'public', 'images', 'bg.png');
+    console.log("called");
     const file = path.join(__dirname, 'public', 'data', 'test.txt');
     res.download(file); // Set disposition and send it.
   });

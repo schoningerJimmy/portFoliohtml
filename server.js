@@ -26,6 +26,18 @@ app.get('/api', (req, res, next) => {
     res.send('API status: running');
 });
 
+
+// the endpoint for the post request
+app.post('/api/email', (req, res) => {
+    
+    console.log(req.body.name); // Subject line
+    console.log(req.body.informationDetails); // plain text body
+    console.log(req.body.email);
+    
+    res.status(200).json({
+        success: true
+    });
+})
 // download the resume from the button
 
 app.get('/download', function(req, res){

@@ -38,7 +38,7 @@ function validateEmail(email) {
     return re.test(String(email).toLowerCase());
 }
 
-function sendEmail() {
+async function sendEmail() {
     // get send button
     const button = document.getElementById('sendEmailButton');
     // get input values
@@ -63,7 +63,28 @@ function sendEmail() {
     
     
     // perform POST method
-    setTimeout(function(){ alert(inputText); button.disabled = false; console.log(textEmail)}, 3000);
+    try {
+        emailContent = {
+            email: inputEmail,
+            name: inputText,
+            informationDetails: textEmail
+        };
+        // fetch data from a url endpoint
+        const res = await axios.post("/api/email", emailContent);
+        console.log(res);
+        if (res.data.success) {
+            alert("sent");
+            button.disabled = false;
+        } else {
+            alert("Not sent");
+            button.disabled = false;
+        }
+
+      } catch(error) {
+        console.log("error", error);
+        // appropriately handle the error
+      }
+    //setTimeout(function(){ alert(inputText); button.disabled = false; console.log(textEmail)}, 3000);
     /*
     if JSON.res(OK)
         set input value to null

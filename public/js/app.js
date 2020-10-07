@@ -32,14 +32,38 @@ function menuToggle() {
     
 }
 
+
+function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
 function sendEmail() {
     // get send button
     const button = document.getElementById('sendEmailButton');
     // get input values
+    const inputText = document.getElementById('inputText').value;
+    const inputEmail = document.getElementById('inputEmail').value;
+    const textEmail = document.getElementById('textEmail').value;
+    
     // disabled button
     button.disabled = true;
-    setTimeout(function(){ alert("disabled"); button.disabled = false; }, 3000);
+    // if one of the value is empty, enable button, alert and return
+    if (inputText === "" || inputEmail === "" || textEmail === "") {
+        button.disabled = false;
+        alert("Check your values! Can't send an empty message.");
+        return;
+    }
+    // if email is not valid, enable, alert and return
+    if(!validateEmail(inputEmail)) {
+        button.disabled = false;
+        alert("Check your email.");
+        return;
+    }
+    
+    
     // perform POST method
+    setTimeout(function(){ alert(inputText); button.disabled = false; console.log(textEmail)}, 3000);
     /*
     if JSON.res(OK)
         set input value to null

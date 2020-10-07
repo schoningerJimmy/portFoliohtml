@@ -33,5 +33,21 @@ function menuToggle() {
 }
 
 function sendEmail() {
-    // TO DO
+    // get send button
+    const button = document.getElementById('sendEmailButton');
+    // get input values
+    // disabled button
+    button.disabled = true;
+    setTimeout(function(){ alert("disabled"); button.disabled = false; }, 3000);
+    // perform POST method
+    /*
+    if JSON.res(OK)
+        set input value to null
+        enable button
+        pop up sent
+    else 
+        enable button
+        display error log
+        pop up not sent
+        */   
 }

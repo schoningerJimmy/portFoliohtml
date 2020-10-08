@@ -13,7 +13,7 @@ You can have a live access to this project with this link: [https://schoninger.h
 	
 ## Technologies
 this project was created with:
-* Javascrip to handle the action
+* Javascript to handle the action
 * HTML/CSS for the front-end
 * NodeJS v12.18.4 for the back-end
 * npm v6.14.6 to run the project
@@ -23,7 +23,8 @@ this project was created with:
 ## Usage
 After you clone this repo to your desktop, go to its root directory and run npm install to install its dependencies.
 
-Once the dependencies are installed, you can run npm start to start the application. You will then be able to access it at localhost:5000
+Once the dependencies are installed, you can run npm start to start the application. You will then be able to access it at localhost:5000.
+
 Below are the command you need to run the project.
 
 ```

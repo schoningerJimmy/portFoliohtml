@@ -12,7 +12,8 @@ Moreover, it includes a form to contact me and a download button to have my resu
 Project is created with:
 * Javascrip to handle the action
 * HTML/CSS for the front-end
-* NodeJS for the back-end
+* NodeJS v12.18.4 for the back-end
+* npm v6.14.6 to run the project
 * heroku to host the project
 	
 ## Setup

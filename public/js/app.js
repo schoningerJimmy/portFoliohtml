@@ -73,8 +73,12 @@ async function sendEmail() {
         const res = await axios.post("/api/email", emailContent);
         console.log(res);
         if (res.data.success) {
-            alert("sent");
             button.disabled = false;
+            document.getElementById('inputText').value = '';
+            document.getElementById('inputEmail').value = '';
+            document.getElementById('textEmail').value = '';
+            alert("sent");
+
         } else {
             alert("Not sent");
             button.disabled = false;
